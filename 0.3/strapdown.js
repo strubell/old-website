@@ -384,10 +384,10 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
   document.head.appendChild(linkEl);
   
   // may not need this
-//  var linkEl = document.createElement('link');
-//  linkEl.href = originBase + '/themes/jumbotron.css';
-//  linkEl.rel = 'stylesheet';
-//  document.head.appendChild(linkEl);
+  var linkEl = document.createElement('link');
+  linkEl.href = originBase + '/themes/jumbotron.css';
+  linkEl.rel = 'stylesheet';
+  document.head.appendChild(linkEl);
 
   var linkEl = document.createElement('link');
   linkEl.href = originBase + '/strapdown.css';
