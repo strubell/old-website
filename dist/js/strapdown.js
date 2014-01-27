@@ -63,18 +63,18 @@
 
   // Stylesheets
   var linkEl = document.createElement('link');
-  linkEl.href = 'dist/css/bootstrap.css';
+  linkEl.href = '../css/bootstrap.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
   
   // may not need this
   var linkEl = document.createElement('link');
-  linkEl.href = 'dist/css/jumbotron.css';
+  linkEl.href = '../css/jumbotron.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
 
   var linkEl = document.createElement('link');
-  linkEl.href = 'dist/js/strapdown.css';
+  linkEl.href = '../css/strapdown.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
 
