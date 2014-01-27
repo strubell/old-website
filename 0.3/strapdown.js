@@ -401,24 +401,22 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
 
   var markdown = markdownEl.textContent || markdownEl.innerText;
 
-  var newNode = document.createElement('div');
-  newNode.className = 'container';
-  newNode.id = 'content';
-  document.body.replaceChild(newNode, markdownEl);
+  var contentNode = document.createElement('div');
+  contentNode.className = 'container';
+  contentNode.id = 'content';
+  document.body.replaceChild(contentNode, markdownEl);
 
   // Insert navbar
-  var newNode = document.createElement('div');
-  newNode.className = 'navbar navbar-fixed-top';
+  var navNode = document.createElement('div');
+  navNode.className = 'navbar navbar-fixed-top';
   if (!navbarEl && titleEl) {
-    newNode.innerHTML = '<div class="navbar-inner"> <div class="container"> <div id="headline" class="brand"> </div> </div> </div>';
-    document.body.insertBefore(newNode, document.body.firstChild);
+	navNode.innerHTML = '<div class="navbar-inner"> <div class="container"> <div id="headline" class="brand"> </div> </div> </div>';
+    document.body.insertBefore(navNode, document.body.firstChild);
     var title = titleEl.innerHTML;
     var headlineEl = document.getElementById('headline');
     if (headlineEl)
       headlineEl.innerHTML = title;
   }
-  
-
   
 	  
   //////////////////////////////////////////////////////////////////////
@@ -447,9 +445,9 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
   }
   
   // Insert footer
-  var newNode = document.createElement('footer');
-  newNode.innerHTML = '<hr><p>Factorie is open source software <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. Please <a href=#cite>cite</a> for research use.<br><a href="http://www.iesl.cs.umass.edu/">Information Extraction and Synthesis Laboratory</a> (IESL), <a href="http://www.cs.umass.edu/">Computer Science Department</a>, <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.</p>';
-  document.getElementById('content').appendChild(newNode);
+  var footerNode = document.createElement('footer');
+  footerNode.innerHTML = '<hr><p>Factorie is open source software <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. Please <a href=#cite>cite</a> for research use.<br><a href="http://www.iesl.cs.umass.edu/">Information Extraction and Synthesis Laboratory</a> (IESL), <a href="http://www.cs.umass.edu/">Computer Science Department</a>, <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.</p>';
+  contentNode.appendChild(newNode);
   
 
   // All done - show body
