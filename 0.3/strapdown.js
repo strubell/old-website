@@ -348,7 +348,8 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
   var markdownEl = document.getElementsByTagName('xmp')[0] || document.getElementsByTagName('textarea')[0],
       titleEl = document.getElementsByTagName('title')[0],
       scriptEls = document.getElementsByTagName('script'),
-      navbarEl = document.getElementsByClassName('navbar')[0];
+      navbarEl = document.getElementsByClassName('navbar')[0],
+      footerEl = document.getElementsByClassName('footer')[0];
 
   //////////////////////////////////////////////////////////////////////
   //
@@ -383,10 +384,10 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
   document.head.appendChild(linkEl);
   
   // may not need this
-  var linkEl = document.createElement('link');
-  linkEl.href = originBase + '/themes/jumbotron.css';
-  linkEl.rel = 'stylesheet';
-  document.head.appendChild(linkEl);
+//  var linkEl = document.createElement('link');
+//  linkEl.href = originBase + '/themes/jumbotron.css';
+//  linkEl.rel = 'stylesheet';
+//  document.head.appendChild(linkEl);
 
 //  var linkEl = document.createElement('link');
 //  linkEl.href = originBase + '/strapdown.css';
@@ -405,8 +406,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
   newNode.id = 'content';
   document.body.replaceChild(newNode, markdownEl);
 
-  // Insert navbar if there's none
-  // TODO just insert our navbar!
+  // Insert navbar
   var newNode = document.createElement('div');
   newNode.className = 'navbar navbar-fixed-top';
   if (!navbarEl && titleEl) {
@@ -417,6 +417,10 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
     if (headlineEl)
       headlineEl.innerHTML = title;
   }
+  
+  // Insert footer
+  var newNode = document.createElement('footer');
+  newNode.innerHTML = '<hr><p>Factorie is open source software <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. Please <a href=#cite>cite</a> for research use.<br><a href="http://www.iesl.cs.umass.edu/">Information Extraction and Synthesis Laboratory</a> (IESL), <a href="http://www.cs.umass.edu/">Computer Science Department</a>, <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.</p>'
 
   //////////////////////////////////////////////////////////////////////
   //
