@@ -404,7 +404,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
   var contentNode = document.createElement('div');
   contentNode.className = 'container';
   contentNode.id = 'content';
-  document.body.replaceChild(newNode, markdownEl);
+  document.body.replaceChild(contentNode, markdownEl);
 
   // Insert navbar
   var newNode = document.createElement('div');
