@@ -401,10 +401,10 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
 
   var markdown = markdownEl.textContent || markdownEl.innerText;
 
-  var contentNode = document.createElement('div');
-  contentNode.className = 'container';
-  contentNode.id = 'content';
-  document.body.replaceChild(contentNode, markdownEl);
+  var newNode = document.createElement('div');
+  newNode.className = 'container';
+  newNode.id = 'content';
+  document.body.replaceChild(newNode, markdownEl);
 
   // Insert navbar
   var newNode = document.createElement('div');
@@ -418,11 +418,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
       headlineEl.innerHTML = title;
   }
   
-  // Insert footer
-  var footerNode = document.createElement('footer');
-  footerNode.innerHTML = '<hr><p>Factorie is open source software <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. Please <a href=#cite>cite</a> for research use.<br><a href="http://www.iesl.cs.umass.edu/">Information Extraction and Synthesis Laboratory</a> (IESL), <a href="http://www.cs.umass.edu/">Computer Science Department</a>, <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.</p>';
-  document.getElementById('content').appendChild(footerNode);
-  
+
   
 	  
   //////////////////////////////////////////////////////////////////////
@@ -449,6 +445,12 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
     var tableEl = tableEls[i];
     tableEl.className = 'table table-striped table-bordered';
   }
+  
+  // Insert footer
+  var newNode = document.createElement('footer');
+  newNode.innerHTML = '<hr><p>Factorie is open source software <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. Please <a href=#cite>cite</a> for research use.<br><a href="http://www.iesl.cs.umass.edu/">Information Extraction and Synthesis Laboratory</a> (IESL), <a href="http://www.cs.umass.edu/">Computer Science Department</a>, <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.</p>';
+  document.getElementById('content').appendChild(newNode);
+  
 
   // All done - show body
   document.body.style.display = '';
