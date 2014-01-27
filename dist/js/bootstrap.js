@@ -2005,7 +2005,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   
   $('#sidebar').affix({
 	  offset: {
-	    top: $('.navbar navbar-default').height() + 20
+	    top: $('.navbar navbar-default').height()
 	  }
 	}); 
 
