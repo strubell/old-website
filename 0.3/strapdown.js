@@ -401,7 +401,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
 
   var markdown = markdownEl.textContent || markdownEl.innerText;
 
-  var newNode = document.createElement('div');
+  var contentNode = document.createElement('div');
   newNode.className = 'container';
   newNode.id = 'content';
   document.body.replaceChild(newNode, markdownEl);
@@ -419,9 +419,9 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap requires jQuery");+func
   }
   
   // Insert footer
-  var newNode = document.createElement('footer');
+  var footerNode = document.createElement('footer');
   newNode.innerHTML = '<hr><p>Factorie is open source software <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. Please <a href=#cite>cite</a> for research use.<br><a href="http://www.iesl.cs.umass.edu/">Information Extraction and Synthesis Laboratory</a> (IESL), <a href="http://www.cs.umass.edu/">Computer Science Department</a>, <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.</p>';
-  document.body.appendChild(newNode);
+  contentNode.appendChild(newNode);
 	  
   //////////////////////////////////////////////////////////////////////
   //
