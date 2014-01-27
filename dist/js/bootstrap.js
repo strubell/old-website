@@ -2002,5 +2002,11 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
       $spy.affix(data)
     })
   })
+  
+  $('#sidebar').affix({
+	  offset: {
+	    top: $('.navbar navbar-default').height()
+	  }
+	}); 
 
 }(jQuery);
