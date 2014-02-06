@@ -8,70 +8,17 @@ weight: 10
 
 # Installation
 
-FACTORIE is known to run on MacOS, Linux, and Windows with Cygwin, and is expected to run on any platform on which the Java Virtual Machine is available.
+FACTORIE is known to run on Mac OSX, Linux, and Windows with Cygwin, and is expected to run on any platform on which the Java Virtual Machine is available. If you encounter difficulties installing FACTORIE please let us know at discuss@factorie.cs.umass.edu.
 
 ## Dependencies
 
-FACTORIE requires Java >= 1.5 and Apache Maven >= 3.0. Maven will install the correct versions of all other dependencies for you, including Scala.
+FACTORIE requires (Java)[http://www.java.com/getjava/] >= 1.5 and (Apache Maven)[http://maven.apache.org/] >= 3.0. Maven will install the correct versions of all other dependencies for you, including [Scala](http://www.scala-lang.org/).
 
 ## Downloading Pre-compiled JAR
 
-To use FACTORIE as a library, download the pre-compiled jar from https://github.com/factorie/factorie/releases. Adding this jar to the classpath of your Java project will allow you to use FACTORIE in that project.
+There are two ways to use FACTORIE as a library, by directly including the jar in your project, or via Maven. You can download the pre-compiled jar from our (GitHub releases page)[https://github.com/factorie/factorie/releases]. Adding this jar to the classpath of your Java project will allow you to use FACTORIE in that project.
 
-If you have the FACTORIE source, you can also run mvn package, which will generate a jar in the target folder which you can then include in other projects.
-
-## Checking out Source from GitHub
-
-You can get the latest FACTORIE source code by cloning our repository on Github:
-
-```
-git clone https://github.com/factorie/factorie.git
-```
-
-## Compiling Development Version Source
-
-To compile FACTORIE, tell Maven to compile the project from the root directory. If you just cloned the git repository into your current directory, then the commands would be:
-
-```
-cd factorie
-mvn compile
-```
-
-This step may take several minutes because it must not only compile all of FACTORIE, but also download any dependencies, such as Scala. Maven will print many messages; no need to be concerned about them unless they start with [ERROR].
-
-If you find you are running out of Java heap space or PermGen space, you may want to add "-Xms2g -Xmx2g -XX:MaxPermSize=256m" to your MAVEN_OPTS environment variable before running Maven:
-
-```
-export MAVEN_OPTS="$MAVEN_OPTS -Xms2g -Xmx2g -XX:MaxPermSize=256m"
-```
-
-This will tell Maven to run Java with 2GB heap space and up to 256MB PermGen space, which should be enough to compile FACTORIE.
-
-## Running Test Suite
-
-After compiling, you may want to run the unit tests. The following command will achieve this:
-
-```
-mvn test
-```
-
-If you are running the latest version from git, rather than a milestone release, then some tests may fail. If tests fail for a milestone release, please contact the mailing list: factorie-discuss@googlegroups.com
-
-## Packaging JARs
-
-The following command will generate a jar in the 'target' folder containing FACTORIE and all of its dependencies, including the Scala runtime:
-
-```
-mvn -Dmaven.test.skip=true package -Pjar-with-dependencies
-```
-
-To additionally include all of the pre-trained NLP models, execute the following:
-
-```
-mvn -Dmaven.test.skip=true package -Pnlp-jar-with-dependencies
-```
-
-## Adding to a Maven Project
+If you have the FACTORIE source, you can also run `mvn package`, which will generate a jar in the target folder which you can then include in other projects.
 
 If you'd like to add FACTORIE as a dependency in a Maven-manged project, first add the FACTORIE repository in the repositories section of the project's pom.xml:
 
@@ -105,7 +52,58 @@ Then add FACTORIE as a dependency in the dependencies section:
 <dependencies>
 ```
 
-## NLP Resources
+## Checking out Source from GitHub
+
+You can get the latest FACTORIE source code by cloning our repository on Github:
+
+```
+git clone https://github.com/factorie/factorie.git
+```
+
+## Compiling from Source
+
+To compile FACTORIE, tell Maven to compile the project from the root directory. If you just cloned the git repository into your current directory, then the commands would be:
+
+```
+cd factorie
+mvn compile
+```
+
+This step may take several minutes because it must not only compile all of FACTORIE, but also download any dependencies, such as Scala. Maven will print many messages; no need to be concerned about them unless they start with [ERROR].
+
+If you find you are running out of Java heap space or PermGen space, you may want to add "-Xms2g -Xmx2g -XX:MaxPermSize=256m" to your MAVEN_OPTS environment variable before running Maven:
+
+```
+export MAVEN_OPTS="$MAVEN_OPTS -Xms2g -Xmx2g -XX:MaxPermSize=256m"
+```
+
+This will tell Maven to run Java with 2GB heap space and up to 256MB PermGen space, which should be enough to compile FACTORIE.
+
+## Running Test Suite
+
+After compiling, you may want to run the unit tests. The following command will achieve this:
+
+```
+mvn test
+```
+
+If you are running the latest version from git, rather than a milestone release, then some tests may fail. If tests fail for a milestone release, please contact the mailing list: factorie-discuss@googlegroups.com.
+
+Next we recommend reading the [tutorials](tutorials.html), and looking at the example code in `src/main/scala/cc/factorie/tutorial`.
+
+## Packaging JARs
+
+The following command will generate a jar in the 'target' folder containing FACTORIE and all of its dependencies, including the Scala runtime:
+
+```
+mvn -Dmaven.test.skip=true package -Pjar-with-dependencies
+```
+
+To additionally include all of the pre-trained NLP models, execute the following:
+
+```
+mvn -Dmaven.test.skip=true package -Pnlp-jar-with-dependencies
+```
 
 To use FACTORIE's pre-trained NLP models in a Maven project, you can add additional dependencies on a per-model basis. For example, to use our pre-trained part-of-speech models, you would add the entry:
 
@@ -113,11 +111,21 @@ To use FACTORIE's pre-trained NLP models in a Maven project, you can add additio
 <dependency>
   <groupId>cc.factorie.app.nlp</groupId>
   <artifactId>pos</artifactId>
-  <version>1.0-RC5</version>
+  <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
 
 To add support for different models, just change the artifactId accordingly. We provide trained models for part-of-speech tagging (pos), dependency parsing (parse), named-entity recognition (ner), mention finding (mention), and coreference (coref). You may also need to include our lexicons (lexicon), and if you choose to use our state-of-the-art ConllStackedChainNer model for named entity recognition, you will also need to include WordNet data (wordnet).
+
+To include all of the pre-trained models at once, you can add the all-models dependency:
+
+```xml
+<dependency>
+  <groupId>cc.factorie.app.nlp</groupId>
+  <artifactId>all-models</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+```
 
 ## Eclipse and IntelliJ IDEA Setup
 

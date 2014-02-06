@@ -22,11 +22,10 @@
   </head>
   {% include navbar.html %}
   <div class="container">
-	<div class="row row-offcanvas row-offcanvas-left">
-	  <div class="col-md-2"> {% include sidenav.html %} </div>
-	</div> <!-- /row row-offcanvas -->
 	<div class="row">
+	  <div class="col-md-2"> {% include sidenav.html %} </div>
 	  <div class="col-md-9 pull-right"> {{ content }} </div>
+	</div> <!-- /row -->
   {% include footer.html %}
   </div> <!-- /container -->
     <!-- Bootstrap core JavaScript
