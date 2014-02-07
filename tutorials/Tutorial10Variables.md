@@ -1,8 +1,8 @@
 ---
 title: "Variable"
 layout: default
-group: tutorials
-weight: 10
+group: tutorial
+weight: 20
 ---
 
 Variable Tutorial

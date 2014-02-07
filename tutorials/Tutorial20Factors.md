@@ -1,8 +1,8 @@
 ---
 title: "Factor"
 layout: default
-group: tutorials
-weight: 10
+group: tutorial
+weight: 30
 ---
 
 

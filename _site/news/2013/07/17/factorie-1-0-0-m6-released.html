@@ -13795,72 +13795,41 @@
 </ul>
 </div> <!--bs-sidebar affix-->
  </div>
-	  <div class="col-md-9 pull-right"> <h2>Factorie 1.0.0-M3 released</h2>
+	  <div class="col-md-9 pull-right"> <h2>Factorie 1.0.0-M6 released</h2>
 
-<p>&raquo; by <a href='http://www.cs.umass.edu/~sameer'>Sameer Singh</a> on 25 Jan 2013</p>
+<p>&raquo; by <a href='http://www.cs.umass.edu/~sameer'>Sameer Singh</a> on 17 Jul 2013</p>
 
-<p>This is the first milestone release for Factorie 1.0. This version comes with many core API changes, complete rewrite of the factorie.la package, reimplemented version of BP, modification to the optimization package, and so on. Detailed changelog attached.</p>
+<p>This is the sixth milestone release for Factorie 1.0. This version comes with many core API changes, complete rewrite of the factorie.la package, reimplemented version of BP, modification to the optimization package, and so on. Detailed changelog attached.</p>
 
 <ul>
-<li>Executable Jar: <strong><a href="http://factorie.googlecode.com/files/factorie-1.0.0-M3.jar">factorie-1.0.0-M3.jar</a></strong></li>
-<li>Source files: <a href="http://factorie.googlecode.com/files/factorie-1.0.0-M3-src.tar.gz">factorie-1.0.0-M3-src.tar.gz</a></li>
+<li>Executable Jar: <strong><a href="http://factorie.googlecode.com/files/factorie-1.0.0-M6.jar">factorie-1.0.0-M6.jar</a></strong></li>
+<li>Source files: <a href="http://factorie.googlecode.com/files/factorie-1.0.0-M6-src.tar.gz">factorie-1.0.0-M6-src.tar.gz</a></li>
 </ul>
 
-<h2>New in version 1.0.0-M3:</h2>
+<h2>New in version 1.0.0-M6:</h2>
 
 <ul>
-<li><p>Documentation</p>
+<li><p>Overall</p>
 
 <ul>
-<li>improved existing tutorials</li>
-<li>new tutorial on Inference and Learning</li>
-<li>better TUI</li>
-<li>better comments and error messages</li>
-<li>Parser Demo</li>
-<li>site can be generated at the users&#39; end</li>
-</ul></li>
-<li><p>Models and Templates</p>
-
-<ul>
-<li>support for feature hashing</li>
-<li>Massive renaming of Variables and Domains</li>
+<li>Website hosted on github</li>
+<li>removing deprecated code</li>
 </ul></li>
 <li><p>NLP</p>
 
 <ul>
-<li>Classifier based POS tagger</li>
-<li>added port of ClearNLP tokenizer/segmenter</li>
-<li>Faster Bibtex parser</li>
-<li>REST API for Parsers</li>
+<li>much improved mention annotators</li>
+<li>classifier-based mention entity type predictor</li>
+<li>deprecated annotators removed: DepParser1, WithinDocCoref1</li>
+<li>CorefGazetteers removed</li>
+<li>new pronoun lexicons</li>
+<li>bugfixes and improvements to coreference</li>
 </ul></li>
-<li><p>Inference</p>
+<li><p>Learning</p>
 
 <ul>
-<li>support efficient inference for ChainModels</li>
-<li>Sampler can return a DiffList of all the changes</li>
-<li>bugfixes in MHSampler</li>
-<li>BP logZ implemented to enable likelihood learning</li>
-</ul></li>
-<li><p>Optimization and Training</p>
-
-<ul>
-<li>Removed redundant SampleRank</li>
-<li>Added Pegasos. Pseudo-likelihood, Contrastive Divergence, StructSVM, AdaGrad</li>
-<li>new ClassifierTrainer to support all types of losses, trainers and optimizers</li>
-<li>better multi-threaded support</li>
-<li>bugfixes and efficiency improvements</li>
-</ul></li>
-<li><p>Tensors</p>
-
-<ul>
-<li>speed enhacements and bugfixes</li>
-<li>more operations implemented</li>
-<li>new tests for Tensors</li>
-</ul></li>
-<li><p>Serialization</p>
-
-<ul>
-<li>all new serialization based on Cubbies</li>
+<li>removing broken optimizers</li>
+<li>bugfix in SampleRank when proposals have same score</li>
 </ul></li>
 </ul>
  </div>

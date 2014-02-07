@@ -2,9 +2,8 @@
 title: "Installation"
 layout: default
 group: usersguide
-weight: 10
+weight: 12
 ---
-
 
 # Installation
 
@@ -12,11 +11,11 @@ FACTORIE is known to run on Mac OSX, Linux, and Windows with Cygwin, and is expe
 
 ## Dependencies
 
-FACTORIE requires (Java)[http://www.java.com/getjava/] >= 1.5 and (Apache Maven)[http://maven.apache.org/] >= 3.0. Maven will install the correct versions of all other dependencies for you, including [Scala](http://www.scala-lang.org/).
+FACTORIE requires [Java](http://www.java.com/getjava/) >= 1.5 and [Apache Maven](http://maven.apache.org/) >= 3.0. Maven will install the correct versions of all other dependencies for you, including [Scala](http://www.scala-lang.org/).
 
 ## Downloading Pre-compiled JAR
 
-There are two ways to use FACTORIE as a library, by directly including the jar in your project, or via Maven. You can download the pre-compiled jar from our (GitHub releases page)[https://github.com/factorie/factorie/releases]. Adding this jar to the classpath of your Java project will allow you to use FACTORIE in that project.
+There are two ways to use FACTORIE as a library, by directly including the jar in your project, or via Maven. You can download the pre-compiled jar from our [GitHub releases page](https://github.com/factorie/factorie/releases). Adding this jar to the classpath of your Java project will allow you to use FACTORIE in that project.
 
 If you have the FACTORIE source, you can also run `mvn package`, which will generate a jar in the target folder which you can then include in other projects.
 
@@ -87,7 +86,7 @@ After compiling, you may want to run the unit tests. The following command will 
 mvn test
 ```
 
-If you are running the latest version from git, rather than a milestone release, then some tests may fail. If tests fail for a milestone release, please contact the mailing list: factorie-discuss@googlegroups.com.
+If you are running the latest version from git, rather than a milestone release, then some tests may fail. If tests fail for a milestone release, please contact the mailing list: discuss@factorie.cs.umass.edu.
 
 Next we recommend reading the [tutorials](tutorials.html), and looking at the example code in `src/main/scala/cc/factorie/tutorial`.
 
@@ -139,7 +138,7 @@ To import FACTORIE as a project in Eclipse or IDEA, start by cloning the git rep
 
 3. Before you can import a Maven Scala project, you’ll also need to install the m2eclipse-scala connector (the Maven plugin that comes with Eclipse doesn’t support Scala by default) by installing the connector from the following Eclipse plugin site: http://alchim31.free.fr/m2e-scala/update-site (via Help->Install New Software)
 
-4. Now import Factorie as a Maven project via File->Import->Maven->Existing Maven Projects. Select the top-level  directory from your cloned version of FACTORIE, the directory containing the pom.xml file, as the root directory.
+4. Now import Factorie as a Maven project via File->Import->Maven->Existing Maven Projects. Select the top-level directory from your cloned version of FACTORIE, the directory containing the pom.xml file, as the root directory.
 
 5. It should work! If Eclipse complains that Factorie is full of syntax errors (yet compiles fine) try cleaning (Project->Clean), rebuilding (should happen automatically after clean, otherwise Project->Build Project) and restarting Eclipse. Also make sure that you are in the Scala perspective.
 
@@ -177,15 +176,13 @@ If you find you are running out of Java heap space or PermGen space when compili
 
 ## Questions, Bug Reports and Feature Requests
 
-The FACTORIE mailing list at factorie-discuss@googlegroups.com is a good place to ask general questions and discuss broad points.
+The FACTORIE mailing list at discuss@factorie.cs.umass.edu is a good place to ask general questions and discuss broad points.
 
-Please report specific problems with the installation, bugs in the code, or feature requests in the FACTORIE GitHub issues tracker at 
-https://github.com/factorie/factorie/issues  
+Please report specific problems with the installation, bugs in the code, or feature requests in the [FACTORIE GitHub issues tracker](https://github.com/factorie/factorie/issues).
 
 ## Coding Standards
 
-We generally follow the Scala style guide suggestions in 
-http://davetron5000.github.com/scala-style/index.html
+We generally follow the Scala style guide suggestions at [http://davetron5000.github.com/scala-style/index.html](http://davetron5000.github.com/scala-style/index.html).
 
 For indentation use two spaces rather than tabs.
 
