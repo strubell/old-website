@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Emma Strubell</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head> 
+
+<body> 
+	<div class="maincontainer">
+		<div class="header"><h1>Emma Strubell</h1></div>
+		<div class="main">
+			<p>I'm a third-year Ph.D. student at
+				<a href="http://www.cs.umass.edu">UMass Amherst</a> 
+				working in the 
+				<a href="http://www.iesl.cs.umass.edu">Information 
+					Extraction and Synthesis Laboratory</a> 
+				with Professor 
+				<a href="http://people.cs.umass.edu/~mccallum/">Andrew
+					McCallum</a>. 
+				Previously, I earned a B.S. in Computer Science from
+				the <a href="http://www.umaine.edu">University of Maine</a> with a minor in math,
+				where I did research with Professor
+                <a href="http://math.umaine.edu/~hiebeler/"> David Hiebeler </a>
+                in his <a href="http://www.math.umaine.edu/~hiebeler/speedlab/">
+                Spatial Population Ecological and Epidemiological Dynamics</a> Lab.
+			</p>
+			
+			<h1>Research Interests</h1>
+			<p><strong>I am interested in developing new machine learning techniques to facilitate fast (and accurate)
+                natural language processing of text.</strong></p>
+            <p>
+                NLP tasks are commonly modeled as <em>structured prediction</em> problems, in which we learn a mapping from
+                the space of possible inputs to an exponentially large space of labels.
+                Since classifying into the exponentially large space of all possible structures is intractible,
+                we need to decompose the structure in a way that allows us to perform more efficient
+                inference.
+            </p><p>
+                One way to do this is by defining the variables that describe the structure
+                and a sparse set of dependencies between them, which results in familiar graphical
+                models such as HMMs or CRFs. An alternative
+                approach is to organize the space of possible classes into a structure that allows for
+                more efficient classification, resulting in classification decisions that do not directly
+                correspond to variable boundaries, but some other latent structure in the space of
+                classes, such as a low-rank neural embedding.
+            </p><p>
+                I am interested in the latter approach, which I believe will allow for fast inference
+                in conjunction with the accuracy gains from using large, joint output spaces.
+            </p>
+
+			<h1>Publications</h1>
+			<ul class="icons-ul">
+			        <li><i class="icon-li icon-plus"></i>
+                        <a href="http://arxiv.org/abs/1410.8498">
+                        Training for Fast Sequential Prediction Using Dynamic Feature Selection.</a>
+                        <strong>Emma Strubell</strong>, Luke Vilnis, and Andrew McCallum.
+                        <em>NIPS Workshop on Modern Machine Learning and NLP (<strong>NIPS WS</strong>). </em>
+                        Montreal, Quebec, Canada. December 2014.
+                        [<a href="bib/nipsws14-strubell.bib">bibtex</a>]</li>
+            </ul>
+            <ul class="icons-ul">
+                <li><i class="icon-li icon-plus"></i>
+                    <a href="">
+                    Minimally Supervised Event Argument Extraction using Universal Schema.</a>
+                    Benjamin Roth, <strong>Emma Strubell</strong>, Katherine Silverstein and Andrew McCallum.
+                    <em>4th Workshop on Automated Knowledge Base Construction (<strong>AKBC</strong>). </em>
+                    At NIPS '14, Montreal, Quebec, Canada. December 2014.
+                    [<a href="bib/akbc14-roth.bib">bibtex</a>]</li>
+            </ul>
+            <ul class="icons-ul">
+                <li><i class="icon-li icon-plus"></i>
+                    <a href="">
+                    Universal Schema for Slot-Filling, Cold-Start KBP and Event Argument Extraction: UMassIESL at TAC KBP 2014.</a>
+                    Benjamin Roth, <strong>Emma Strubell</strong>, John Sullivan, Lakshmi Vikraman, Katherine Silverstein, and Andrew McCallum.
+                    <em>Text Analysis Conference (Knowledge Base Population Track) '14 Workshop (<strong>TAC KBP</strong>).</em>
+                    Gaithersburg, Maryland, USA. November 2014.
+                    [<a href="bib/tackbc2014-roth.bib">bibtex</a>]</li>
+            </ul>
+            <ul class="icons-ul">
+                <li><i class="icon-li icon-plus"></i>
+                    <a href="http://digitalcommons.library.umaine.edu/cgi/viewcontent.cgi?article=1081&context=honors">
+                    Modeling the Spread of Biologically-Inspired Internet Worms.</a>
+                    <strong>Emma Strubell</strong>.
+                    <em>Undergraduate honors thesis.</em>
+                    University of Maine Honors College, Orono, Maine, USA. May 2012.
+                    [<a href="bib/thesis12-strubell.bib">bibtex</a>]</li>
+            </ul>
+
+			<h1>/etc</h1>
+			<p><strong>In my spare time</strong>, I enjoy cooking (with a focus
+                on making vegetables delicious), fermenting (kombucha, saurkraut, kimchi),
+                growing plants (especially succulents), and enjoying the outdoors (hiking and camping).
+            </p>
+            <p>In my junior year of college I wrote and presented a tutorial on quantum algorithms aimed for
+                undergraduate students in computer science, available <a href="doc/quantum_tutorial.pdf">here</a>, along
+                with slides <a href="doc/quantum_presentation_1.pdf">part 1</a> and <a href="doc/quantum_presentation_2.pdf">part 2</a>.
+            </p>
+            <p> I am a proud and happy <a href="https://www.gentoo.org/main/en/about.xml">Gentoo Linux</a> user since 2005. </p>
+		</div><!-- closes main-->
+		<div class="contactbox"><div class="contact">
+			<img src="img/me_with_camel2.jpeg" title="With a camel">
+			<p><span style="padding-left:1px; padding-right:2px;"><i class="icon-map-marker icon-large"></i></span> Amherst, Massachusetts, USA</p>
+			<p><span style="padding-left:1px; padding-right:2px;"><i class="icon-globe"></i></span> cs.umass.edu/~strubell</p>
+			<p><span style="padding-right:2px;"><i class="icon-envelope"></i></span> strubell [at] cs [dot] umass [dot] edu</p>
+			<p><span style="padding-left:2px; padding-right:2px;"><i class="icon-file"></i></span> <a href="doc/emma-strubell-resume.pdf">Resume (PDF)</a></p>
+			<div class="social">
+				<span class="fb"><a href="http://www.facebook.com/emmastrubell"><i class="icon-facebook-sign icon-2x"></i></a> &nbsp;&nbsp;</span>
+				<span class="lin"><a href="https://www.linkedin.com/profile/view?id=313657197"><i class="icon-linkedin-sign icon-2x"></i></a> &nbsp;&nbsp;</span>
+				<span class="gp"><a href="http://plus.google.com/u/0/+EmmaStrubell/posts"><i class="icon-google-plus-sign icon-2x"></i></a> &nbsp;&nbsp;</span>
+                <!--<span class="qu"><a href="http://www.quora.com/Emma-Strubell"><i class="glyphicon glyphicon_social"></i></a> &nbsp;&nbsp;</span>-->
+                <span class="gh"><a href="http://github.com/strubell"><i class="icon-github-alt icon-2x"></i></a> </span>
+			</div>
+			<br />
+			<br />
+		</div></div><!-- closes contact-->
+	</div><!-- closes main container-->
+	<div style="clear:both;"></div>
+	<div class="footer">
+		<i class="icon-globe"></i> &nbsp; people.cs.umass.edu/~strubell &nbsp;&nbsp;&nbsp;&nbsp;
+		<i class="icon-envelope"></i> &nbsp; strubell [at] cs [dot] umass [dot] edu
+		<br />
+		Last updated 15 November 2014.
+		<br /><br /><br />
+	</div>
+</body>
+</html>
