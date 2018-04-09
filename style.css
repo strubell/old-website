@@ -90,13 +90,13 @@ h1,h2,h3{line-height:1.2}
     width:230px;
 }
 
-.qq { 
+/*.qq { 
 	color:#fff;
 	font-family: serif;
 	margin: 2px 0 0 -18px;
 	font-size: 17px;
 	position: absolute;
-}
+}*/
 
 .social { width:160px; margin:auto; padding-top:20px;}
 .social a { color:#000; }
