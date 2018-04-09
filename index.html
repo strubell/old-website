@@ -39,23 +39,9 @@
 			<p><strong>I am interested in developing new machine learning techniques to facilitate fast (and accurate)
                 natural language processing of text.</strong></p>
             <p>
-                NLP tasks are commonly modeled as <em>structured prediction</em> problems, in which we learn a mapping from
-                the space of possible inputs to an exponentially large space of labels.
-                Since classifying into the exponentially large space of all possible structures is intractable,
-                we need to decompose the structure in a way that allows us to perform more efficient
-                inference.
-            </p><p>
-                One way to do this is by defining the variables that describe the structure
-                and a sparse set of dependencies between them, which results in familiar graphical
-                models such as HMMs or CRFs. An alternative
-                approach is to organize the space of possible classes into a structure that allows for
-                more efficient classification, resulting in classification decisions that do not directly
-                correspond to variable boundaries, but some other latent structure in the space of
-                classes, such as a low-rank neural embedding.
-            </p><p>
-                I am interested in the latter approach, which I believe will allow for fast inference
-                in conjunction with the accuracy gains from using large, joint output spaces.
-            </p>
+			Techniques for low-level NLP tasks such as part-of-speech tagging, named entity recognition and syntactic dependency parsing are now accurate enough to be of use to practitioners who wish to extract structured information from unstructured text, such as that found in blog posts and discussion forums on the web, or the text of scientific research papers. Though we now wish to deploy these tools on billions of documents, most models were designed with only accuracy in mind, with no regard for computational cost. In response, our work aims to design machine learning algorithms to facilitate fast inference in NLP models while sacrificing as little accuracy as possible. 
+			<p><p>
+			My research focuses on two avenues for improving the speed-accuracy trade-off: First, we develop models which can quickly build up rich representations of tokens in context used as features in a <emph>sequential prediction</emph> model, where sequence labeling is performed as a series of independent multi-class classifications. This approach allows for much faster inference than e.g. structured prediction in a graphical model while maintaining accuracy via high-quality feature representations incorporating wide context and a concept of neighboring labels. Second, we unify related NLP tasks into a single end-to-end model which reasons in the joint space of output labels. With this approach we aim to increase accuracy by reducing cascading errors and leveraging shared statistics of co-occurring labels, while at the same time decreasing wall-clock runtime speed by sharing model parameters and computation across tasks.
 
 			<h1>Publications</h1>
 
